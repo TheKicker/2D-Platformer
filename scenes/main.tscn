@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/player/character_0002.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Player.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 8.5 )
+
+[node name="Node" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65518, 0, 0, -65517, 0, 0, -65516, 0, 0, -65515, 0, 0, 65534, 0, 0, 21, 0, 0, 131070, 0, 0, 65557, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131091, 0, 0, 131092, 0, 0, 131093, 0, 0, 262142, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196625, 0, 0, 196629, 0, 0, 327678, 0, 0, 262160, 0, 0, 262165, 0, 0, 393214, 0, 0, 327695, 0, 0, 327701, 0, 0, 458750, 0, 0, 393221, 0, 0, 393222, 0, 0, 393237, 0, 0, 524286, 0, 0, 458756, 0, 0, 458759, 0, 0, 458765, 0, 0, 458773, 0, 0, 589822, 0, 0, 524291, 0, 0, 524296, 0, 0, 524300, 0, 0, 524309, 0, 0, 655358, 0, 0, 589835, 0, 0, 589845, 0, 0, 720894, 0, 0, 720895, 0, 0, 655380, 0, 0, 655381, 0, 0, 786431, 0, 0, 720916, 0, 0, 851967, 0, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786450, 0, 0, 786451, 0, 0, 786452, 0, 0 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 97, 78 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+position = Vector2( 0, 3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 0, 6.5 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 160, 91 )
+current = true
