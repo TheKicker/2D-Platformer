@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+# Basic config
 var gravity = 1000
 var velocity = Vector2.ZERO
 var horizontalAcceleration = 2000
@@ -14,22 +15,36 @@ func _ready():
 # Processed every frame, delta is seconds since last run (very very small number)
 func _process(delta):
 	
-	
+	# Vector2 is used for 2D Math calculations, if left 0 it amounts to False
 	var moveVector = Vector2.ZERO
+	
+	# If right is pressed 1 moves right, if left is pressed -1 moves left, else or both zero out
 	moveVector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	# Unless we jump, the default is zero
 	moveVector.y = -1 if Input.is_action_just_pressed("jump") else 0
 	
+	# Combine our vector, with acceleration and delta
 	velocity.x += moveVector.x * horizontalAcceleration * delta
+	
+	# Slow down the player when button is released
 	if (moveVector.x == 0):
+		# Lerp is basically (from, to, how far between 0 and 1) so lerp(0, 10, 0.5) will equal 5
+		# Linear Interpolation to find all the points between two 
+		# pow(2, x * delta) allows us to be framerate independent.  No matter what you play on the deceleration is the same
 		velocity.x = lerp(0, velocity.x, pow(2, -50 * delta))
 	
+	# Limits our positive and negative speed to our maximmum horizontal speed
 	velocity.x = clamp(velocity.x, -maxHorizontalSpeed, maxHorizontalSpeed)
 	
+	# Removes the ability to spam jump, player must be on the floor
 	if (moveVector.y < 0 && is_on_floor()):
 		velocity.y = moveVector.y * jumpSpeed
 	
+	# Allows the player to control the height of their jumps (tap versus hold)
 	if (velocity.y < 0 && !Input.is_action_pressed("jump")):
 		velocity.y += gravity * jumpTerminationMultiplier * delta
 	else:
 		velocity.y += gravity * delta
+	
+	# Calculates the collisions and movements before looping to the next FPS
 	velocity = move_and_slide(velocity, Vector2.UP)
