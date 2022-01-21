@@ -14,14 +14,7 @@ func _ready():
 
 # Processed every frame, delta is seconds since last run (very very small number)
 func _process(delta):
-	
-	# Vector2 is used for 2D Math calculations, if left 0 it amounts to False
-	var moveVector = Vector2.ZERO
-	
-	# If right is pressed 1 moves right, if left is pressed -1 moves left, else or both zero out
-	moveVector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-	# Unless we jump, the default is zero
-	moveVector.y = -1 if Input.is_action_just_pressed("jump") else 0
+	var moveVector = get_movement_vector()
 	
 	# Combine our vector, with acceleration and delta
 	velocity.x += moveVector.x * horizontalAcceleration * delta
@@ -48,3 +41,14 @@ func _process(delta):
 	
 	# Calculates the collisions and movements before looping to the next FPS
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+func get_movement_vector():
+	# Vector2 is used for 2D Math calculations, if left 0 it amounts to False
+	var moveVector = Vector2.ZERO
+	
+	# If right is pressed 1 moves right, if left is pressed -1 moves left, else or both zero out
+	moveVector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	# Unless we jump, the default is zero
+	moveVector.y = -1 if Input.is_action_just_pressed("jump") else 0
+	
+	return moveVector
