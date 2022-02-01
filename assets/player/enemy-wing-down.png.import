@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character_0003.png-5c03cc7612d2858fc0e552cb4bf49e30.stex"
+path="res://.import/enemy-wing-down.png-fe698d784904e3fab2665d0b870d3eb6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/character_0003.png"
-dest_files=[ "res://.import/character_0003.png-5c03cc7612d2858fc0e552cb4bf49e30.stex" ]
+source_file="res://assets/player/enemy-wing-down.png"
+dest_files=[ "res://.import/enemy-wing-down.png-fe698d784904e3fab2665d0b870d3eb6.stex" ]
 
 [params]
 
