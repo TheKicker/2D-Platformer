@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal death
+
 # Basic config
 var gravity = 1000
 var velocity = Vector2.ZERO
@@ -11,8 +13,12 @@ var hasDoubleJump = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$HazardArea.connect("area_entered", self, "on_hazard_area_entered")
 
+
+func on_hazard_area_entered(area2d):
+	emit_signal("death")
+	
 # Processed every frame, delta is seconds since last run (very very small number)
 func _process(delta):
 	var moveVector = get_movement_vector()

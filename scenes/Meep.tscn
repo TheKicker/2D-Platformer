@@ -11,10 +11,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Node" type="Node"]
+[node name="Meep" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -8 )
 frames = SubResource( 1 )
-frame = 1
 playing = true

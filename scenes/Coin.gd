@@ -9,3 +9,4 @@ func on_area_entered(area2d):
 	
 func disable_pickup():
 	$Area2D/CollisionShape2D.disabled = true
+
