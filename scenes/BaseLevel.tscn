@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://resources/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/GameCamera.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Player.gd" type="Script" id=4]
+[ext_resource path="res://scenes/GameCamera.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Spikes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/BaseLevel.gd" type="Script" id=7]
+
+[node name="BaseLevel" type="Node"]
+script = ExtResource( 7 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 524281, 0, 0, 524282, 0, 1, 524283, 0, 1, 524284, 0, 1, 524285, 0, 1, 524286, 0, 1, 524287, 0, 1, 458752, 0, 1, 458753, 0, 1, 458754, 0, 1, 458755, 0, 1, 458756, 0, 1, 458757, 0, 1, 458758, 0, 1, 458759, 0, 1, 458760, 0, 1, 458761, 0, 1, 458762, 0, 1, 458763, 0, 1, 458764, 0, 1, 458765, 0, 1, 458766, 0, 1, 458767, 0, 1, 458768, 0, 1, 458769, 0, 1, 458770, 0, 2, 589817, 0, 131072, 589818, 0, 131073, 589819, 0, 131073, 589820, 0, 131073, 589821, 0, 131073, 589822, 0, 131073, 589823, 0, 131073, 524288, 0, 131073, 524289, 0, 131073, 524290, 0, 131073, 524291, 0, 131073, 524292, 0, 131073, 524293, 0, 131073, 524294, 0, 131073, 524295, 0, 131073, 524296, 0, 131073, 524297, 0, 131073, 524298, 0, 131073, 524299, 0, 131073, 524300, 0, 131073, 524301, 0, 131073, 524302, 0, 131073, 524303, 0, 131073, 524304, 0, 131073, 524305, 0, 131073, 524306, 0, 131074 )
+
+[node name="Player" type="KinematicBody2D" parent="." groups=["player"] instance=ExtResource( 3 )]
+position = Vector2( 56, 32 )
+script = ExtResource( 4 )
+
+[node name="GameCamera" type="Camera2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 162, 96 )
+current = true
+script = ExtResource( 5 )
+backgroundColor = Color( 0.603922, 1, 0.980392, 1 )
+
+[node name="Spikes" parent="." instance=ExtResource( 6 )]
+position = Vector2( 56, 112 )
