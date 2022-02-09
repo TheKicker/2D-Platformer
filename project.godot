@@ -74,6 +74,7 @@ jump={
 2d_physics/layer_1="TERRAIN"
 2d_physics/layer_2="COINS"
 2d_physics/layer_3="HAZARDS"
+2d_physics/layer_4="ENEMY_GOAL"
 
 [physics]
 

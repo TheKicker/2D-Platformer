@@ -33,6 +33,7 @@ animations = [ {
 } ]
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
+collision_layer = 0
 script = ExtResource( 1 )
 
 [node name="CoinArea" type="Area2D" parent="."]
