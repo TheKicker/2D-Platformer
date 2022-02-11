@@ -9,7 +9,7 @@ var gravity = 1000
 var velocity = Vector2.ZERO
 var horizontalAcceleration = 2000
 var maxHorizontalSpeed = 150
-var maxDashSpeed = 600
+var maxDashSpeed = 650
 var minDashSpeed = 100
 var jumpSpeed = 375
 var jumpTerminationMultiplier = 4
@@ -40,6 +40,9 @@ func change_state(newState):
 
 func process_normal(delta):
 	var moveVector = get_movement_vector()
+	
+	if (isStateNew):
+		$DashHitbox/CollisionShape2D.disabled = true
 	
 	# Combine our vector, with acceleration and delta
 	velocity.x += moveVector.x * horizontalAcceleration * delta
@@ -86,6 +89,7 @@ func process_normal(delta):
 func process_dashing(delta):
 	$AnimatedSprite.play("Dash")
 	if (isStateNew):
+		$DashHitbox/CollisionShape2D.disabled = false
 		var moveVector = get_movement_vector()
 		var velocityMod = 1
 		if(moveVector.x != 0):

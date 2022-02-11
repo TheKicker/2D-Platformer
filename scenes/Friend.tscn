@@ -18,7 +18,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 49.0
+radius = 41.0
 
 [node name="Friend" type="Node2D"]
 script = ExtResource( 3 )
