@@ -1,4 +1,7 @@
 # 2D Platformer 
+Taking a shot at learning the Godot Game Engine! Using a course from Udemy and their documentation.  The foundations of the game match the tutorial, but I've modified some of the mechanics to make it my own.
+
+Tutorial by <a href="https://store.steampowered.com/search/?term=Firebelley+Games">Firebelley Games</a> and can be found <a href="https://www.udemy.com/course/create-a-complete-2d-platformer-in-the-godot-engine/"> on uDemy. </a>
 
 <br> 
 
