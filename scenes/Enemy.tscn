@@ -30,6 +30,7 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -12 )
 frames = SubResource( 1 )
+frame = 2
 playing = true
 
 [node name="TerrainCollision" type="CollisionShape2D" parent="."]
@@ -47,8 +48,8 @@ position = Vector2( 0, -9 )
 shape = SubResource( 3 )
 
 [node name="HazardArea" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 64
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
 position = Vector2( 0, -13.5 )

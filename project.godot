@@ -83,6 +83,8 @@ dash={
 2d_physics/layer_4="ENEMY_GOAL"
 2d_physics/layer_5="SNOW_MAN"
 2d_physics/layer_6="DASH_HITBOX"
+2d_physics/layer_7="ENEMY_HAZARD"
+2d_physics/layer_10="VICTORY_ROYALE"
 
 [physics]
 

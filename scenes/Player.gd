@@ -4,6 +4,8 @@ signal death
 
 enum State {NORMAL, DASHING}
 
+export(int, LAYERS_2D_PHYSICS) var dashHazardMask
+
 # Basic config
 var gravity = 1000
 var velocity = Vector2.ZERO
@@ -16,11 +18,12 @@ var jumpTerminationMultiplier = 4
 var hasDoubleJump = false
 var currentState = State.NORMAL
 var isStateNew = true
+var defaultHazardMask = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$HazardArea.connect("area_entered", self, "on_hazard_area_entered")
-
+	defaultHazardMask = $HazardArea.collision_mask
 
 func on_hazard_area_entered(area2d):
 	emit_signal("death")
@@ -43,6 +46,7 @@ func process_normal(delta):
 	
 	if (isStateNew):
 		$DashHitbox/CollisionShape2D.disabled = true
+		$HazardArea.collision_mask = defaultHazardMask
 	
 	# Combine our vector, with acceleration and delta
 	velocity.x += moveVector.x * horizontalAcceleration * delta
@@ -88,6 +92,7 @@ func process_normal(delta):
 
 func process_dashing(delta):
 	$AnimatedSprite.play("Dash")
+	$HazardArea.collision_mask = dashHazardMask
 	if (isStateNew):
 		$DashHitbox/CollisionShape2D.disabled = false
 		var moveVector = get_movement_vector()
