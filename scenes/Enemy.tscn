@@ -23,14 +23,14 @@ extents = Vector2( 9.5, 4.5 )
 [sub_resource type="CircleShape2D" id=5]
 radius = 18.0
 
-[node name="Enemy" type="KinematicBody2D"]
+[node name="Enemy" type="KinematicBody2D" groups=["enemy"]]
 collision_layer = 0
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -12 )
 frames = SubResource( 1 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="TerrainCollision" type="CollisionShape2D" parent="."]

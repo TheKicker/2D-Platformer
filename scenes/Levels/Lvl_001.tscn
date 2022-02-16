@@ -65,13 +65,16 @@ position = Vector2( 521, -127 )
 position = Vector2( -384, 160 )
 
 [node name="Coin2" parent="Coins" index="1" instance=ExtResource( 4 )]
-position = Vector2( 8, -144 )
+position = Vector2( 8, -168 )
 
 [node name="Coin3" parent="Coins" index="2" instance=ExtResource( 4 )]
 position = Vector2( 264, 272 )
 
 [node name="Coin4" parent="Coins" index="3" instance=ExtResource( 4 )]
 position = Vector2( 576, -208 )
+
+[node name="Coin5" parent="Coins" index="4" instance=ExtResource( 4 )]
+position = Vector2( -325, -220 )
 
 [node name="Friend" parent="Friends" index="0" instance=ExtResource( 3 )]
 position = Vector2( -144, -160 )
