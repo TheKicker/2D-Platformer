@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Spikes.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/EnemyGoal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/BaseLevel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/BarrierVertical.tscn" type="PackedScene" id=9]
 
 [node name="Lvl_000" instance=ExtResource( 7 )]
 
@@ -46,3 +47,22 @@ position = Vector2( -45, 0 )
 
 [node name="Flag" parent="." index="7" instance=ExtResource( 8 )]
 position = Vector2( -81, -9 )
+
+[node name="Label" type="Label" parent="." index="8"]
+margin_left = -108.0
+margin_top = -85.0
+margin_right = 108.0
+margin_bottom = -22.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "2D Platformer Tutorial"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftBarrier" parent="." index="9" instance=ExtResource( 9 )]
+position = Vector2( -297, 216 )
+
+[node name="RightBarrier" parent="." index="10" instance=ExtResource( 9 )]
+position = Vector2( 297, 216 )

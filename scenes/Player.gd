@@ -130,8 +130,3 @@ func update_animation():
 	
 	if(moveVect.x != 0):
 		$AnimatedSprite.flip_h = true if moveVect.x > 0 else false
-	
-	
-	
-	
-	

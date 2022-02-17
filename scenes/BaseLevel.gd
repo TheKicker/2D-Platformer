@@ -48,3 +48,4 @@ func on_player_died():
 	# Remove the old player, spawn a new one 
 	currentPlayerNode.queue_free()
 	create_player()
+
