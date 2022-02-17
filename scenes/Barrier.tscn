@@ -3,10 +3,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 288 )
 
-[node name="BarrierVertical" type="Node2D"]
+[node name="Barrier" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+rotation = 1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 0, -288 )
 shape = SubResource( 1 )

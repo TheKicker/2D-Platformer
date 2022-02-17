@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/EnemyGoal.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Spikes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Friend.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/BarrierVertical.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Barrier.tscn" type="PackedScene" id=8]
 
 [node name="BaseLevel" instance=ExtResource( 1 )]
 

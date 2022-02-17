@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/EnemyGoal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/BaseLevel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/BarrierVertical.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Barrier.tscn" type="PackedScene" id=9]
 
 [node name="Lvl_000" instance=ExtResource( 7 )]
 
@@ -62,7 +62,9 @@ __meta__ = {
 }
 
 [node name="LeftBarrier" parent="." index="9" instance=ExtResource( 9 )]
-position = Vector2( -297, 216 )
+position = Vector2( -288, -144 )
+rotation = 1.5708
 
 [node name="RightBarrier" parent="." index="10" instance=ExtResource( 9 )]
-position = Vector2( 297, 216 )
+position = Vector2( 288, -144 )
+rotation = 1.5708
