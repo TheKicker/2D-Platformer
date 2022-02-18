@@ -62,9 +62,9 @@ __meta__ = {
 }
 
 [node name="LeftBarrier" parent="." index="9" instance=ExtResource( 9 )]
-position = Vector2( -288, -144 )
+position = Vector2( -288, -72 )
 rotation = 1.5708
 
 [node name="RightBarrier" parent="." index="10" instance=ExtResource( 9 )]
-position = Vector2( 288, -144 )
+position = Vector2( 297, -72 )
 rotation = 1.5708
