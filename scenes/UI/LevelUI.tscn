@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/UI/LevelUI.gd" type="Script" id=2]
+[ext_resource path="res://assets/coin/tile_0151.png" type="Texture" id=3]
+[ext_resource path="res://assets/coin/tile_0152.png" type="Texture" id=4]
+
+[sub_resource type="AnimatedTexture" id=1]
+frames = 2
+fps = 6.0
+frame_0/texture = ExtResource( 3 )
+frame_1/texture = ExtResource( 4 )
+frame_1/delay_sec = 0.0
 
 [node name="LevelUI" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -19,11 +28,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CoinLabel" type="Label" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 margin_left = 9.0
 margin_top = 9.0
-margin_right = 34.0
-margin_bottom = 22.0
+margin_right = 56.0
+margin_bottom = 27.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+margin_right = 18.0
+margin_bottom = 18.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+margin_left = 22.0
+margin_top = 2.0
+margin_right = 47.0
+margin_bottom = 15.0
+size_flags_horizontal = 0
 text = "10/32"

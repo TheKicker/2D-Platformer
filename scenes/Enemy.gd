@@ -4,13 +4,10 @@ var maxSpeed = 40
 var velocity = Vector2.ZERO
 var direction = Vector2.ZERO
 var gravity = 400
-
-# enum is basically a way of defining some values, and we're providing options to a drop down
-enum Direction {RIGHT,LEFT}
-export (Direction) var startDirection
+var startDirection = Vector2.RIGHT
 
 func _ready():
-	direction = Vector2.RIGHT if startDirection == Direction.RIGHT else Vector2.LEFT
+	direction = startDirection
 	$GoalDetector.connect("area_entered", self, "on_goal_entered")
 	$HitboxArea.connect("area_entered", self, "on_hitbox_entered")
 

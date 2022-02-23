@@ -1,0 +1,11 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/LevelManager.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Levels/Lvl_003.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Levels/Lvl_000.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Levels/Lvl_002.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Levels/Lvl_001.tscn" type="PackedScene" id=5]
+
+[node name="LevelManager" type="Node"]
+script = ExtResource( 1 )
+levelScenes = [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ) ]

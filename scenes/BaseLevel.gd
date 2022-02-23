@@ -20,6 +20,8 @@ func _ready():
 	coin_total_change(get_tree().get_nodes_in_group("coin").size())
 	totalEnemies = get_tree().get_nodes_in_group("enemy").size()
 	print("Coins: ", totalCoins, " / Enemies: ", totalEnemies)
+	
+	$Flag.connect("victory_royale", self, "on_victory_royale")
 
 func coin_collected():
 	collectedCoins += 1
@@ -49,3 +51,5 @@ func on_player_died():
 	currentPlayerNode.queue_free()
 	create_player()
 
+func on_victory_royale():
+	$"/root/LevelManager".increment_level()
