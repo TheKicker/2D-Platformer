@@ -44,9 +44,33 @@ git clone https://github.com/TheKicker/2D-Platformer.git
 ## Other assets by me in Adobe Creative Cloud
 <ul>
 <li> Added Dash/Crouch/Idle frames to the Blue Guy character. </li>
-<li> Added a really simple Perseverance Rover to the asset files featured on several levels.</li>
+<li> Added a really simple Rover (inspired by Perseverance) to the asset files featured on several levels.</li>
 
-<figure>
-    <img src"/assets/player/rover/SPRITE-DRIVE.png" style="min-height: 96px;">
-    <figcaption>Rover Idle</figcaption>
-</figure>
+<div style="display: flex; flex-direction: row; justify-content: space-around">
+    <figure>
+        <img src="assets/player/rover/SPRITE-RRRR.png" style="min-height: 96px;">
+        <figcaption>Rover - Driving - Frame 001</figcaption>
+    </figure>
+    <figure>
+        <img src="assets/player/rover/SPRITE-RRR.png" style="min-height: 96px;">
+        <figcaption>Rover - Driving - Frame 002</figcaption>
+    </figure>
+    <figure>
+        <img src="assets/player/rover/SPRITE-RR.png" style="min-height: 96px;">
+        <figcaption>Rover - Driving - Frame 003</figcaption>
+    </figure>
+    <figure>
+        <img src="assets/player/rover/SPRITE-R.png" style="min-height: 96px;">
+        <figcaption>Rover - Driving - Frame 004</figcaption>
+    </figure>
+</div>
+<div style="display: flex; flex-direction: row; justify-content: space-around">
+    <figure>
+        <img src="assets/player/rover/SPRITE-DRIVE.png" style="min-height: 96px;">
+        <figcaption>Rover - Idle - Frame 001</figcaption>
+    </figure>
+    <figure>
+        <img src="assets/player/rover/SPRITE-JUMP.png" style="min-height: 96px;">
+        <figcaption>Rover - Jump or Falling - Frame 001</figcaption>
+    </figure>
+</div>
