@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/BaseLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Barrier.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/Coin.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Spikes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Rover.tscn" type="PackedScene" id=8]
 
 [node name="Lvl_003" instance=ExtResource( 1 )]
 
@@ -25,11 +26,17 @@ position = Vector2( -199, 306 )
 [node name="Coin" parent="Coins" index="0" instance=ExtResource( 5 )]
 position = Vector2( -216, 216 )
 
-[node name="Barrier" parent="Friends" index="0" instance=ExtResource( 2 )]
+[node name="Rover" parent="Friends" index="0" instance=ExtResource( 8 )]
+position = Vector2( -1116, 3735 )
+
+[node name="Barrier" parent="Friends" index="1" instance=ExtResource( 2 )]
 position = Vector2( 0, -207 )
 
+[node name="EnemyGoal" parent="Friends" index="2" instance=ExtResource( 4 )]
+position = Vector2( -144, 3942 )
+
 [node name="Player" parent="." index="7"]
-position = Vector2( -54, 0 )
+position = Vector2( 0, -45 )
 
 [node name="Flag" parent="." index="8" instance=ExtResource( 7 )]
 position = Vector2( 3, 3942 )

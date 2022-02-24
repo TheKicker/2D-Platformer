@@ -115,7 +115,6 @@ func get_movement_vector():
 	moveVector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	# Unless we jump, the default is zero
 	moveVector.y = -1 if Input.is_action_just_pressed("jump") else 0
-	
 	return moveVector
 
 func update_animation():
@@ -125,7 +124,9 @@ func update_animation():
 		$AnimatedSprite.play("Jump")
 	elif(moveVect.x != 0):
 		$AnimatedSprite.play("Run")
-	else:
+	elif(Input.is_action_pressed("crouch") and moveVect.x == 0):
+		$AnimatedSprite.play("Crouch")
+	else: 
 		$AnimatedSprite.play("Idle")
 	
 	if(moveVect.x != 0):
