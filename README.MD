@@ -42,6 +42,9 @@ git clone https://github.com/TheKicker/2D-Platformer.git
 <br>
 
 ## Other assets by me in Adobe Creative Cloud
+<br>
+<hr>
+<br>
 <ul>
     <li> Added Dash/Crouch/Idle frames to the Blue Guy character. </li>
 </ul>
@@ -74,6 +77,9 @@ git clone https://github.com/TheKicker/2D-Platformer.git
         <figcaption>Blue - Crouch - Frame 001</figcaption>
     </figure>
 </div>
+
+<br> 
+<hr> 
 
 <ul>
     <li> Added a really simple Rover (inspired by Perseverance) to the asset files featured on several levels.</li>
