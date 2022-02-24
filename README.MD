@@ -35,7 +35,18 @@ git clone https://github.com/TheKicker/2D-Platformer.git
 
 <div align="center">
     <br>
-    <h2>Assets by <a href="https://www.kenney.nl/">Kenney 🎮</a></h2>
+    <h2>Most of the assets by <a href="https://www.kenney.nl/">Kenney 🎮</a></h2>
 </div>
 <br>
 <hr>
+<br>
+
+## Other assets by me in Adobe Creative Cloud
+<ul>
+<li> Added Dash/Crouch/Idle frames to the Blue Guy character. </li>
+<li> Added a really simple Perseverance Rover to the asset files featured on several levels.</li>
+
+<figure>
+    <img src"/assets/player/rover/SPRITE-DRIVE.png" style="min-height: 96px;">
+    <figcaption>Rover Idle</figcaption>
+</figure>
