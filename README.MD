@@ -41,8 +41,7 @@ git clone https://github.com/TheKicker/2D-Platformer.git
 <hr>
 <br>
 
-## Other assets by me in Adobe Creative Cloud
-<br>
+## Other assets by me in Adobe Creative Cloud: 
 <hr>
 <br>
 <ul>
@@ -52,29 +51,29 @@ git clone https://github.com/TheKicker/2D-Platformer.git
 <div style="display: flex; flex-direction: row; justify-content: space-around">
     <figure>
         <img src="assets/player/blue-walk.png" style="min-height: 96px;">
-        <figcaption>Blue - Walking - Frame 001</figcaption>
+        <figcaption>Blue - Walking</figcaption>
     </figure>
     <figure>
         <img src="assets/player/blue-stand.png" style="min-height: 96px;">
-        <figcaption>Blue - Walking/Idle - Frame 001 & 002</figcaption>
+        <figcaption>Blue - Walking/Idle</figcaption>
     </figure>
     <figure>
         <img src="assets/player/blue-stand2.png" style="min-height: 96px;">
-        <figcaption>Blue - Idle - Frame 002</figcaption>
+        <figcaption>Blue - Idle</figcaption>
     </figure>
 </div>
 <div style="display: flex; flex-direction: row; justify-content: space-around">
     <figure>
         <img src="assets/player/blue-dash.png" style="min-height: 96px;">
-        <figcaption>Blue - Dashing - Frame 001</figcaption>
+        <figcaption>Blue - Dashing</figcaption>
     </figure>
     <figure>
         <img src="assets/player/blue-walk.png" style="min-height: 96px;">
-        <figcaption>Blue - Jumping - Frame 001</figcaption>
+        <figcaption>Blue - Jumping</figcaption>
     </figure>
     <figure>
         <img src="assets/player/blue-crouch.png" style="min-height: 96px;">
-        <figcaption>Blue - Crouch - Frame 001</figcaption>
+        <figcaption>Blue - Crouch</figcaption>
     </figure>
 </div>
 
@@ -88,29 +87,29 @@ git clone https://github.com/TheKicker/2D-Platformer.git
 <div style="display: flex; flex-direction: row; justify-content: space-around">
     <figure>
         <img src="assets/player/rover/SPRITE-RRRR.png" style="min-height: 96px;">
-        <figcaption>Rover - Driving - Frame 001</figcaption>
+        <figcaption>Rover - Driving</figcaption>
     </figure>
     <figure>
         <img src="assets/player/rover/SPRITE-RRR.png" style="min-height: 96px;">
-        <figcaption>Rover - Driving - Frame 002</figcaption>
+        <figcaption>Rover - Driving</figcaption>
     </figure>
     <figure>
         <img src="assets/player/rover/SPRITE-RR.png" style="min-height: 96px;">
-        <figcaption>Rover - Driving - Frame 003</figcaption>
+        <figcaption>Rover - Driving</figcaption>
     </figure>
     <figure>
         <img src="assets/player/rover/SPRITE-R.png" style="min-height: 96px;">
-        <figcaption>Rover - Driving - Frame 004</figcaption>
+        <figcaption>Rover - Driving</figcaption>
     </figure>
 </div>
 
 <div style="display: flex; flex-direction: row; justify-content: space-around">
     <figure>
         <img src="assets/player/rover/SPRITE-DRIVE.png" style="min-height: 96px;">
-        <figcaption>Rover - Idle - Frame 001</figcaption>
+        <figcaption>Rover - Idle</figcaption>
     </figure>
     <figure>
         <img src="assets/player/rover/SPRITE-JUMP.png" style="min-height: 96px;">
-        <figcaption>Rover - Jump or Falling - Frame 001</figcaption>
+        <figcaption>Rover - Jump or Falling</figcaption>
     </figure>
 </div>
