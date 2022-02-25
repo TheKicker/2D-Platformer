@@ -10,11 +10,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "default",
@@ -24,25 +19,31 @@ animations = [ {
 "loop": true,
 "name": "drive",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 22.75, 18.5 )
+extents = Vector2( 11.875, 9.25 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 22.75, 18.5 )
+extents = Vector2( 12.1875, 9.25 )
 
 [node name="Rover" type="KinematicBody2D" groups=["enemy"]]
 collision_layer = 0
 script = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -21 )
+position = Vector2( 0, -10 )
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 playing = true
 
 [node name="TerrainCollision" type="CollisionShape2D" parent="."]
-position = Vector2( -2.75, -19 )
+position = Vector2( -1.875, -9.25 )
 shape = SubResource( 2 )
 
 [node name="GoalDetector" type="Area2D" parent="."]
@@ -50,7 +51,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoalDetector"]
-position = Vector2( -2.75, -19 )
+position = Vector2( -1.8125, -9.25 )
 shape = SubResource( 3 )
 
 [connection signal="area_entered" from="GoalDetector" to="." method="_on_GoalDetector_area_entered"]
