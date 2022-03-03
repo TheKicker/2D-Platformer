@@ -52,4 +52,7 @@ func on_player_died():
 	create_player()
 
 func on_victory_royale():
-	$"/root/LevelManager".increment_level()
+	if(collectedCoins == totalCoins):
+		$"/root/LevelManager".increment_level()
+	else:
+		print("You need more coins!")
